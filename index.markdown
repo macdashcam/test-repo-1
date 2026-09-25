@@ -4,3 +4,4 @@
 
 layout: home
 ---
+{% include plants1.html %}

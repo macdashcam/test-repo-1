@@ -1,0 +1,36 @@
+<!-- display an unordered list of the planet data -->
+<ul>
+{% for plant in site.data.plants1 %}
+  <li><strong>{{ plant.name }}</strong> has color {{ plant.color }}</li>
+{% endfor %}
+</ul>
+
+<!-- display a table of the plant data -->
+ <table>
+    <thead>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Utility</th>
+    </thead>
+    <tbody>
+        {% for plant in site.data.plants1 %}
+        <tr>
+            <td>{{ plant.name }}</td>
+            <td>{{ plant.color }}</td>
+            <td>{{ plant.utility }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- <table>
+    <thead><th>Name</th><th>Color</th><th>Utility</th></thead>
+    <tbody>
+        {% for plant in site.data.plants1 %}
+        <tr>
+            <td>{{ plant.name }}</td>
+            <td>{% if plant.color %}{{ plant.color }}{% endif %}</td>
+            <td>{{ plant.utility }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table> -->
